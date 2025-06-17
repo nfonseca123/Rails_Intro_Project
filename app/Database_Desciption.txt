@@ -1,6 +1,10 @@
-I will use the Faker gem to generate user data and regions for my database,
-which will consist of two tables: users and regions. The users table will
-store information such as email, first name, last name, phone number, and a
-foreign key (region_id) linking each user to a region. The regions table will
-contain seven predefined regions, each identified by an id and name. This setup
-establishes a one-to-many relationship where multiple users can belong to a single region.
+I will use the Faker gem to generate user data and the Countries & Cities API (https://documenter.getpostman.com/view/1134062/T1LJjU52#dd5bd0d9-2602-4161-8c77-3af30cd2f41a)
+to populate the cities and countries in my database, which consists of three
+tables: users, states, and countries. The users table will store information such
+as email, first_name, last_name, phone_number, and a foreign key (state_id) that
+links each user to a state. The states table will contain an id, name, and a
+foreign key (country_id) that connects each state to a country in the countries
+table. The countries table will store the id and name of each country. This setup
+establishes one-to-many relationships, where multiple users can belong to a single
+state, and multiple states can belong to a single country, ensuring structured data
+organization and efficient querying.
