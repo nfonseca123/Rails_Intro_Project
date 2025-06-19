@@ -8,3 +8,19 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+*{
+  font-family: sans-serif;
+}
+
+ #user_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+  #user_list .card.mb-3 {
+    flex: 1 1 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 5px;
+  }

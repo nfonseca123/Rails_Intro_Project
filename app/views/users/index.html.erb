@@ -1,0 +1,20 @@
+<h1>Users#index</h1>
+<%= form_with url: users_path, method: :get, local: true do %>
+  <div class="form-group">
+    <%= label_tag :state_id, "Filter by City/State" %>
+    <%= select_tag :state_id, options_from_collection_for_select(@states, :id, :name, @selected_state), include_blank: "All City/States", class: "form-control" %>
+    <%= submit_tag "Filter", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="user_list">
+        <%= render @users %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Right half content -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title"><%= user.first_name %> <%= user.last_name %></h5>
+    <p class="card-text">Email: <%= user.email %></p>
+    <p class="card-text">Phone Number: <%= user.phone_number %></p>
+    <p class="card-text">Country: <%= user.state&.country&.name || "N/A" %></p>
+    <p class="card-text">State: <%= user.state&.name || "N/A" %></p>
+  </div>
+</div>
