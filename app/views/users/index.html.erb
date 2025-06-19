@@ -1,6 +1,8 @@
 <h1>Users#index</h1>
 <%= form_with url: users_path, method: :get, local: true do %>
   <div class="form-group">
+    <%= label_tag :query, "Search by Text: " %>
+    <%= text_field_tag :query, @query, class: "form-control", placeholder: "Type to search..." %>
     <%= label_tag :state_id, "Filter by City/State" %>
     <%= select_tag :state_id, options_from_collection_for_select(@states, :id, :name, @selected_state), include_blank: "All City/States", class: "form-control" %>
     <%= submit_tag "Filter", class: "btn btn-primary" %>
@@ -11,6 +13,9 @@
     <div class="col-md-6">
       <div id="user_list">
         <%= render @users %>
+        <% if @users.empty? %>
+          <p class="text-muted">No users found.</p>
+        <% end %>
       </div>
     </div>
     <div class="col-md-6">
