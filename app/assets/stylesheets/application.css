@@ -39,3 +39,10 @@ flex-wrap: wrap;
   border-radius: 3px;
   margin: 5px;
 }
+
+#about-paragraph {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
