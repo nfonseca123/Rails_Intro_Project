@@ -1,10 +1,10 @@
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title"><%= user.first_name %> <%= user.last_name %></h5>
-    <p class="card-text">Email: <%= user.email %></p>
-    <p class="card-text">Phone Number: <%= user.phone_number %></p>
-    <p class="card-text">Country: <%= user.state&.country&.name || "N/A" %></p>
-    <p class="card-text">State: <%= user.state&.name || "N/A" %></p>
+    <h3 class="card-title"><%= user.first_name %> <%= user.last_name %></h3>
+    <p class="card-text"><strong>Email: </strong><%= user.email %></p>
+    <p class="card-text"><strong>Phone Number:</strong> <%= user.phone_number %></p>
+    <p class="card-text"><strong>Country: </strong> <%= user.state&.country&.name || "N/A" %></p>
+    <p class="card-text"><Strong>State: </strong><%= user.state&.name || "N/A" %></p>
     <% if current_page?(user_path(user))%>
       <%= link_to "Back", users_path, class: "btn btn-primary" %>
     <% else %>
