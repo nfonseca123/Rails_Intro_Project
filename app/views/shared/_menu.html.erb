@@ -1,7 +1,15 @@
 <nav>
   <ul class="nav">
-    <li class="nav-li"><%= link_to "Users", users_path %></li>
-    <li class="nav-li"><%= link_to "About", pages_about_path %></li>
+    <% if current_page?(users_path)%>
+      <%= link_to "Users", users_path, style: "font-weight: bold;"%>
+    <% else %>
+      <%= link_to "Users", users_path%>
+    <% end %>
+    <% if current_page?(pages_about_path)%>
+      <%= link_to "About", pages_about_path, style: "font-weight: bold;"%>
+    <% else %>
+      <%= link_to "About", pages_about_path%>
+    <% end %>
   </ul>
 </nav>
 
