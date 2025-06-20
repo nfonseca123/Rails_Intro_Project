@@ -25,7 +25,7 @@ end
 
 puts 'Seeding countries, states, and users...'
 
-50.times do
+150.times do
   location = get_random_location
 
   next unless location[:country] && location[:city]
