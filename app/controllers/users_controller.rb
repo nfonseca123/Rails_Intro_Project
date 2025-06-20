@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     ) if @query.present?
   end
 
-  def about
+  def show
+    @user = User.find(params[:id])
   end
+
 end
