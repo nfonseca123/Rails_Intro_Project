@@ -13,7 +13,8 @@
   <div class="row">
     <div class="col-md-6">
       <div id="user_list">
-        <%= render @users %>
+        <%= render @users%>
+        <%= paginate @users %>
         <% if @users.empty? %>
           <p class="text-muted">No users found.</p>
         <% end %>

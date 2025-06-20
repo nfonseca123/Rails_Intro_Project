@@ -11,6 +11,8 @@ class UsersController < ApplicationController
     .where("users.first_name LIKE :q OR users.last_name LIKE :q OR users.email LIKE :q OR users.phone_number LIKE :q OR states.name LIKE :q OR countries.name LIKE :q",
       q: "%#{@query}%"
     ) if @query.present?
+
+    @users = @users.page(params[:page]).per(20)
   end
 
   def show
