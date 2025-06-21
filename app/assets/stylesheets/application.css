@@ -46,3 +46,15 @@ flex-wrap: wrap;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
